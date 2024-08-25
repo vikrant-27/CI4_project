@@ -1,0 +1,16 @@
+ERROR - 2024-08-24 11:12:13 --> mysqli_sql_exception: Table 'admin' already exists in C:\MyProjects\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\MyProjects\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `a...', 0)
+#1 C:\MyProjects\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 C:\MyProjects\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 C:\MyProjects\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 C:\MyProjects\app\Database\Migrations\24082024040234_Admin.php(40): CodeIgniter\Database\Forge->createTable('admin')
+#5 C:\MyProjects\system\Database\MigrationRunner.php(867): App\Database\Migrations\Admin->up()
+#6 C:\MyProjects\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\MyProjects\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\MyProjects\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\MyProjects\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\MyProjects\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\MyProjects\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\MyProjects\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
